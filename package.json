@@ -1,0 +1,16 @@
+{
+  "name": "nes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "box (mattcoady's conflicted copy 2019-09-27).js",
+  "scripts": {
+    "build": "tsc box.ts",
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  }
+}

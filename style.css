@@ -1,0 +1,98 @@
+body {
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  margin: 0;
+}
+
+.manual-page:first-child {
+  background-position: 100%;
+}
+
+.thumbs {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.thumb {
+  width: 80px;
+  height: 114px;
+  background-size: 185px;
+  background-position: 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* 3D Cube */
+.box-wrapper {
+  pointer-events: none;
+}
+
+.space3d {
+  perspective: 1000px;
+  width: 728px;
+  height: 1000px;
+  text-align: center;
+  display: inline-block;
+  transform: scale(0.4);
+  pointer-events: none;
+  cursor: e-resize;
+  margin-top: -100px;
+}
+
+._3dbox {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(40deg);
+  pointer-events: none;
+  cursor: e-resize;
+}
+
+._3dface {
+  overflow: hidden;
+  position: absolute;
+  border: 1px solid #888;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.3);
+  color: #333;
+  line-height: 728px;
+  background: url(boxes/1.jpg) no-repeat #ffffff;
+  background-size: 1600px 1000px;
+  pointer-events: none;
+  cursor: e-resize;
+}
+
+._3dface--large--face {
+  width: 728px;
+  height: 1000px;
+}
+
+._3dface--side--face {
+  width: 144px;
+  height: 1000px;
+  left: 50%;
+  margin-left: -72px;
+  background-position: -728px 0;
+}
+
+._3dface--front {
+  transform: translate3d(0, 0, 72px);
+  background-position: 100%;
+}
+
+._3dface--left {
+  transform: rotateY(-90deg) translate3d(0, 0, 364px);
+}
+
+._3dface--right {
+  transform: rotateY(90deg) translate3d(0, 0, 364px);
+}
+
+._3dface--back {
+  transform: rotateY(180deg) translate3d(0, 0, 72px);
+}
